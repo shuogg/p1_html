@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>管理平台</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../bootstrap/bootstrap-table/bootstrap-table.css">
+  <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+  <script src="../bootstrap/bootstrap-table/bootstrap-table.js"></script>
+  <script src="../bootstrap/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+  <script src="../bootstrap/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <script src="../layui/layui.js"></script>
+  <script src="http://momentjs.com/downloads/moment.js"></script>
+  <script src="../js/get_server_new.js"></script>
+
+
+</head>
+<body>
+ 
+<ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item"><a href="">最新活动</a></li>
+  <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+  <li class="layui-nav-item"><a href="">大数据</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">解决方案</a>
+    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+      <dd><a id='a1' href="http://www.baidu.com">移动模块</a></dd>
+      <dd><a href="javascript:;">后台模版</a></dd>
+      <dd><a href="javascript:;">电商平台</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">社区</a></li>
+</ul>
+<div class="row" style="width:98%">
+<div class="col-md-2">
+<ul class="layui-nav layui-nav-tree" lay-filter="test">
+<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+  <li class="layui-nav-item layui-nav-itemed">
+    <a href="javascript:;">业务管理</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">区组管理</a></dd>
+      <dd><a href="javascript:;">机器管理</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item layui-nav-itemed">
+    <a href="javascript:;">操作平台</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">区组操作</a></dd>
+      <dd><a href="javascript:;">机器操作</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">用户管理</a>
+    <dl class="layui-nav-child">
+      <dd><a href="./user_serch.html">用户搜索</a></dd>
+      <dd><a href="./user_serch_ad.html">用户查询</a></dd>
+      <dd><a href="./user_register.html">用户注册</a></dd>
+      <!-- <dd><a href="">电商平台</a></dd> -->
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="javascript:;">大数据</a></li>
+</ul>
+</div>
+<div class="col-md-10" >
+
+</div>
+ 
+<script>
+//注意：导航 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element();
+
+  //…
+});
+
+check_login()
+
+</script>
+
+
+</div>
+
+
+</body>
+</html>
+
