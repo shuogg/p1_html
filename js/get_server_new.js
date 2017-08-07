@@ -30,7 +30,6 @@ header = {'X-CSRFToken': csrftoken }
 function  Insert_Name() {
     var Oname = document.getElementById('vname');
     try {
-        alert('username' + name)
         Oname.innerHTML = ' <li class="layui-nav-item"  style="float: right"><span  id="logout">&nbsp;&nbsp;退出</span></li><li class="layui-nav-item" style="float: right">' + name + '</li> '
         window.onload = function () {
             var Ologout = document.getElementById('logout')
