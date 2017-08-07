@@ -30,7 +30,12 @@ header = {'X-CSRFToken': csrftoken }
 function  Insert_Name() {
     var Oname = document.getElementById('vname');
     try {
-        Oname.innerHTML = ' <li class="layui-nav-item"  style="float: right"><a href="">退出</a></li>   <li class="layui-nav-item" style="float: right">' + name + '</li> '
+        alert('username' + name)
+        Oname.innerHTML = ' <li class="layui-nav-item"  style="float: right"><span  id="logout">&nbsp;&nbsp;退出</span></li><li class="layui-nav-item" style="float: right">' + name + '</li> '
+        window.onload = function () {
+            var Ologout = document.getElementById('logout')
+            Ologout.onclick = logout
+        }
     }
     catch (e) {
         window.location.href= httpserver + 'index.html'
@@ -56,6 +61,10 @@ function  get_req(objurl,dataType,message) {
 	headers: header,
         async: false,
         dataType : dataType,
+        error: function (data) {
+            alert('请求错误')
+
+        },
         success: function(data){
             if (data.status == '0')
             {
@@ -63,7 +72,7 @@ function  get_req(objurl,dataType,message) {
             }
             if (data.status == '200')
             {
-
+                /* alert(message + '成功') */
             }
         }
 
@@ -110,7 +119,7 @@ function   post_req(ojburl,data,dataType,message) {
 
 
 function check_login() {
-    get_req('check_user','json','登录')
+    get_req('check_user','json','检查登录')
 }
 
 
@@ -127,9 +136,14 @@ function login() {
 
 function logout() {
     delete name;
+    get_req('logout','json','登出')
+    window.location.href= httpserver + 'login.html';
 
 
 }
+
+
+
 function create_user() {
     result = post_req('register',$('#Cuser').serialize(),'json','注册')
 }

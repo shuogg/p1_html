@@ -22,24 +22,37 @@
 
   <script src="../js/user_table.js"></script>
   <script src="../js/get_server_new.js"></script>
+  <style>
+    /*  .header-top { position: relative;} */
+    .header-left {width: 50%; height:60px;float: left}
+    .header-right { position: absolute; right: 0px; width: 47%; float: right}
+    .header-logo { margin-left:0px;height: 59px;}
+    .clear { clear: both;}
+  </style>
 
 </head>
 <body>
- 
-<ul class="layui-nav" lay-filter="">
-  <li class="layui-nav-item"><a href="">最新活动</a></li>
-  <li class="layui-nav-item layui-this"><a href="">产品</a></li>
-  <li class="layui-nav-item"><a href="">大数据</a></li>
-  <li class="layui-nav-item">
-    <a href="javascript:;">解决方案</a>
-    <dl class="layui-nav-child"> <!-- 二级菜单 -->
-      <dd><a id='a1' href="http://www.baidu.com">移动模块</a></dd>
-      <dd><a href="javascript:;">后台模版</a></dd>
-      <dd><a href="javascript:;">电商平台</a></dd>
-    </dl>
-  </li>
-  <li class="layui-nav-item"><a href="">社区</a></li>
-</ul>
+
+<div class="layui-header header header-demo header-top" style="background-color: #393d49;">
+  <ul class="layui-nav header-left"  lay-filter="">
+    <li class="layui-nav-item"><a href="">最新活动</a></li>
+    <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+    <li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item">
+      <a href="javascript:;">解决方案</a>
+      <dl class="layui-nav-child">
+        <dd><a id='a1' href="http://www.baidu.com">个人设置</a></dd>
+        <dd><a href="javascript:;">修改密码</a></dd>
+        <dd><a href="javascript:;">电商平台</a></dd>
+      </dl>
+    </li>
+
+  </ul>
+  <ul class="layui-nav header-right" id="vname">
+
+  </ul>
+</div>
+<div class="both"></div>
 <div class="row">
 <div class="col-md-2">
 <ul class="layui-nav layui-nav-tree" lay-filter="test">
@@ -137,7 +150,7 @@ layui.use('element', function(){
 });
 
 
-
+Insert_Name()
 </script>
 
 </div>
