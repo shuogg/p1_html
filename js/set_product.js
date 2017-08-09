@@ -1,7 +1,7 @@
 /**
  * Created by liushuo on 2017/8/9.
  */
-
+check_login()
 var OP_ul = document.getElementById('p_ul');
 var OP_li = OP_ul.getElementsByTagName('a');
 var OP_btn = document.getElementById('p_btn')
