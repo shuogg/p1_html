@@ -18,11 +18,13 @@
   <link rel="stylesheet" href="../layui/css/layui.css">
   <script src="../layui/layui.js"></script>
   <script src="http://momentjs.com/downloads/moment.js"></script>
+  <script src="js/product.js"></script>
   <script src="../js/get_server_new.js"></script>
   <style>
     /*  .header-top { position: relative;} */
-    .header-left {width: 50%; height:60px;float: left}
-    .header-right { position: absolute; right: 0px; width: 47%; float: right}
+    .header-left {width: 50%; height:60px;float: left;padding-left: 14%}
+    .header-center {float: left; padding-top: 10px; width: 15%}
+    .header-right { position: absolute; right: 0px; width: 15%;}
     .header-logo { margin-left:0px;height: 59px;}
     .clear { clear: both;}
 
@@ -34,8 +36,7 @@
 
 </head>
 <body>
-
-<div class="layui-header header header-demo header-top" style=";background-color: #393d49;">
+<div class="layui-header header header-demo header-top" style=";background-color: #393d49;" id="div1">
   <ul class="layui-nav header-left"  lay-filter="">
     <li class="layui-nav-item"><a href="">最新活动</a></li>
     <li class="layui-nav-item layui-this"><a href="">产品</a></li>
@@ -98,10 +99,11 @@ layui.use('element', function(){
 });
 
 check_login()
-Insert_Name()
+
+
+
 </script>
-
-
+  <script src="js/set_product.js"></script>
 </div>
 
 

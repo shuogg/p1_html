@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1">
+    <li id="123"><a href="#">123</a> </li>
+    <li>456</li>
+</ul>
+
+</body>
+<script>
+window.onload = function  () {
+    var Oul = document.getElementById('ul1');
+    var Oli = Oul.getElementsByTagName('a');
+    for (var i=0;i<Oli.length;i++)
+    {
+        Oli[i].onclick = function () {
+            alert(this.innerHTML)
+        }
+    }
+
+}
+
+</script>
+</html>

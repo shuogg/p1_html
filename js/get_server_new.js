@@ -71,6 +71,11 @@ function  get_req(objurl,dataType,message) {
             }
             if (data.status == '200')
             {
+                if (message != '登出') {
+                    Insert_Name()
+                    Init_Project()
+                }
+
                 /* alert(message + '成功') */
             }
         }
